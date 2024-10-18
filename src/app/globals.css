@@ -4,19 +4,14 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #26425A;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +19,31 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.custom-pagination .swiper-pagination-line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  border-radius: 0px;
+  background-color: #663399;
+  margin: 0 4px;
+}
+
+.custom-pagination .swiper-pagination-line-active {
+  background-color: #663399;
+}
+
+div.swiper-button-prev,
+div.swiper-button-next {
+  color: red;
+}
+
+@media screen and (max-width: 640px) {
+
+  /* Estilos que serão aplicados quando a largura da tela for 768px ou menor */
+  .custom-pagination .swiper-pagination-line {
+    visibility: hidden;
+  }
+
 }

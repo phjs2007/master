@@ -9,8 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "fundo": "#0D1B2A",
+        "button": "#a0d62e",
+      },
+      padding: {
+        'sm_main': '50px 40px 0 40px',
+        "main": "30px 20px 0 20px"
+      },
+      margin: {
+        'sm_main': '0px 60px 0 60px',
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(0deg, rgba(94,145,15,1) 0%, rgba(161,193,64,1) 100%)',
+        'bg-custom': "url('/assets/bg.webp')", // Corrigido aqui
       },
     },
   },
