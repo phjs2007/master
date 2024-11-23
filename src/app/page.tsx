@@ -1,5 +1,6 @@
 "use client";
 import Frost from "./componets/frost";
+import Image from "next/image";
 
 
 
@@ -12,6 +13,7 @@ import { Heart, ShoppingCart } from "lucide-react";
 import Carrosel from "./componets/carrosel";
 import Cardslide from "./componets/card-slide";
 import Card from "./componets/card";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -64,33 +66,299 @@ export default function Home() {
           loop={true}
 
           modules={[ Navigation]}>
-            <SwiperSlide >
-            <div className="flex flex-col gap-4  sm:grid sm:grid-cols-2 sm:grid-rows-4  lg:grid-cols-4 lg:grid-rows-2 sm:gap-4">
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-            </div>
-            </SwiperSlide>
+          <SwiperSlide className="space-y-7" >
+            <div className="w-full flex gap-7">
+              <div className="w-1/3">
+                <Link href="/produto/game" className="">
 
-            <SwiperSlide>
-            <div className="flex flex-col gap-4  sm:grid sm:grid-cols-2 sm:grid-rows-6  md:grid-cols-4 md:grid-rows-2 sm:gap-4">
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
-              <div > <Card/> </div>
+                  <div className="bg-white w-full h-full sm:w-full sm:h-full xl:w-full xl:h-auto 2xl:w-full 2xl:h-full text-black">
+                      <div>
+                          <Image
+                              src="/assets/bg.webp"
+                              alt="Baldur's Gate 3"
+                              width={500}
+                              height={500}
+                              quality={100}
+                              className="w-full h-1/2"
+                          />
+                      </div>
+                      <div className="grid grid-rows-2 p-1 sm:p-2">
+                          <div className="flex justify-between mx-1 lg:mx-1">
+                              <h1 className="font-semibold">Baldur's Gate III</h1>
+                          </div>
+                          <div className="flex justify-end items-center mt-2 mr-2 space-x-2 w-full">
+                              <div className="w-36 flex justify-end items-center gap-4">
+                                  <div className="w-full text-center">
+                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
+                                          50%
+                                      </h1>
+                                  </div>
+                                  <div className="flex flex-col font-medium justify-end items-end m-auto">
+                                      <span className="text-sm line-through w-fit">R$40</span>
+                                      <span className="w-fit">R$20.00</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </Link>
+              </div>
+
+
+              <div className="w-1/3">
+                <Link href="/produto/game" className="">
+
+                  <div className="bg-white w-full h-full sm:w-full sm:h-full xl:w-full xl:h-auto 2xl:w-full 2xl:h-full text-black">
+                      <div>
+                          <Image
+                              src="/assets/bg.webp"
+                              alt="Baldur's Gate 3"
+                              width={500}
+                              height={500}
+                              quality={100}
+                              className="w-full h-1/2"
+                          />
+                      </div>
+                      <div className="grid grid-rows-2 p-1 sm:p-2">
+                          <div className="flex justify-between mx-1 lg:mx-1">
+                              <h1 className="font-semibold">Baldur's Gate III</h1>
+                          </div>
+                          <div className="flex justify-end items-center mt-2 mr-2 space-x-2 w-full">
+                              <div className="w-36 flex justify-end items-center gap-4">
+                                  <div className="w-full text-center">
+                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
+                                          50%
+                                      </h1>
+                                  </div>
+                                  <div className="flex flex-col font-medium justify-end items-end m-auto">
+                                      <span className="text-sm line-through w-fit">R$40</span>
+                                      <span className="w-fit">R$20.00</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="w-1/3">
+                <Link href="/produto/game" className="">
+
+                  <div className="bg-white w-full h-full sm:w-full sm:h-full xl:w-full xl:h-auto 2xl:w-full 2xl:h-full text-black">
+                      <div>
+                          <Image
+                              src="/assets/bg.webp"
+                              alt="Baldur's Gate 3"
+                              width={500}
+                              height={500}
+                              quality={100}
+                              className="w-full h-1/2"
+                          />
+                      </div>
+                      <div className="grid grid-rows-2 p-1 sm:p-2">
+                          <div className="flex justify-between mx-1 lg:mx-1">
+                              <h1 className="font-semibold">Baldur's Gate III</h1>
+                          </div>
+                          <div className="flex justify-end items-center mt-2 mr-2 space-x-2 w-full">
+                              <div className="w-36 flex justify-end items-center gap-4">
+                                  <div className="w-full text-center">
+                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
+                                          50%
+                                      </h1>
+                                  </div>
+                                  <div className="flex flex-col font-medium justify-end items-end m-auto">
+                                      <span className="text-sm line-through w-fit">R$40</span>
+                                      <span className="w-fit">R$20.00</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex w-full gap-3">
               <div > <Card/> </div>
               <div > <Card/> </div>
               <div > <Card/> </div>
               <div > <Card/> </div>
             </div>
-            </SwiperSlide>
+          </SwiperSlide>
+          <SwiperSlide className="space-y-7" >
+            <div className="w-full flex gap-7">
+              <div className="w-1/3">
+                <Link href="/produto/game" className="">
+
+                  <div className="bg-white w-full h-full sm:w-full sm:h-full xl:w-full xl:h-auto 2xl:w-full 2xl:h-full text-black">
+                      <div>
+                          <Image
+                              src="/assets/bg.webp"
+                              alt="Baldur's Gate 3"
+                              width={500}
+                              height={500}
+                              quality={100}
+                              className="w-full h-1/2"
+                          />
+                      </div>
+                      <div className="grid grid-rows-2 p-1 sm:p-2">
+                          <div className="flex justify-between mx-1 lg:mx-1">
+                              <h1 className="font-semibold">Baldur's Gate III</h1>
+                          </div>
+                          <div className="flex justify-end items-center mt-2 mr-2 space-x-2 w-full">
+                              <div className="w-36 flex justify-end items-center gap-4">
+                                  <div className="w-full text-center">
+                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
+                                          50%
+                                      </h1>
+                                  </div>
+                                  <div className="flex flex-col font-medium justify-end items-end m-auto">
+                                      <span className="text-sm line-through w-fit">R$40</span>
+                                      <span className="w-fit">R$20.00</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </Link>
+              </div>
+
+
+              <div className="w-1/3">
+                <Link href="/produto/game" className="">
+
+                  <div className="bg-white w-full h-full sm:w-full sm:h-full xl:w-full xl:h-auto 2xl:w-full 2xl:h-full text-black">
+                      <div>
+                          <Image
+                              src="/assets/bg.webp"
+                              alt="Baldur's Gate 3"
+                              width={500}
+                              height={500}
+                              quality={100}
+                              className="w-full h-1/2"
+                          />
+                      </div>
+                      <div className="grid grid-rows-2 p-1 sm:p-2">
+                          <div className="flex justify-between mx-1 lg:mx-1">
+                              <h1 className="font-semibold">Baldur's Gate III</h1>
+                          </div>
+                          <div className="flex justify-end items-center mt-2 mr-2 space-x-2 w-full">
+                              <div className="w-36 flex justify-end items-center gap-4">
+                                  <div className="w-full text-center">
+                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
+                                          50%
+                                      </h1>
+                                  </div>
+                                  <div className="flex flex-col font-medium justify-end items-end m-auto">
+                                      <span className="text-sm line-through w-fit">R$40</span>
+                                      <span className="w-fit">R$20.00</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="w-1/3">
+                <Link href="/produto/game" className="">
+
+                  <div className="bg-white w-full h-full sm:w-full sm:h-full xl:w-full xl:h-auto 2xl:w-full 2xl:h-full text-black">
+                      <div>
+                          <Image
+                              src="/assets/bg.webp"
+                              alt="Baldur's Gate 3"
+                              width={500}
+                              height={500}
+                              quality={100}
+                              className="w-full h-1/2"
+                          />
+                      </div>
+                      <div className="grid grid-rows-2 p-1 sm:p-2">
+                          <div className="flex justify-between mx-1 lg:mx-1">
+                              <h1 className="font-semibold">Baldur's Gate III</h1>
+                          </div>
+                          <div className="flex justify-end items-center mt-2 mr-2 space-x-2 w-full">
+                              <div className="w-36 flex justify-end items-center gap-4">
+                                  <div className="w-full text-center">
+                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
+                                          50%
+                                      </h1>
+                                  </div>
+                                  <div className="flex flex-col font-medium justify-end items-end m-auto">
+                                      <span className="text-sm line-through w-fit">R$40</span>
+                                      <span className="w-fit">R$20.00</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex w-full gap-3">
+              <div > <Card/> </div>
+              <div > <Card/> </div>
+              <div > <Card/> </div>
+              <div > <Card/> </div>
+            </div>
+          </SwiperSlide>
           </Swiper>
         </section>
+
+        <section className="w-full">
+          <div className="w-full flex gap-8">
+            <div className="flex-1">
+
+              <div className="w-full h-11 mb-4 border-b-[2px] uppercase border-opacity-55 border-gray-500">
+                <h1>
+                  Bestsellers
+                </h1>
+              </div>
+
+              <div className="w-full h-36 bg-white flex text-black">
+
+                <div className=" p-1 w-1/3 h-full">
+                  <Image
+                     src="/assets/bg.webp"
+                     alt="Baldur's Gate 3"
+                     width={200}
+                     height={200}
+                     quality={100}
+                     className=" w-full h-full "
+                   />
+                </div>
+
+                <div className="flex-1 flex flex-col">
+                  <div className="flex-1">
+                    <p>
+                      Baldurs gate 3
+                    </p>
+                  </div>
+                  <div className="flex justify-end items-end flex-1">
+                    <Heart />
+                    <div className="flex flex-col font-medium justify-end items-end m-auto">
+                                      <span className="text-sm line-through w-fit">R$40</span>
+                                      <span className="w-fit">R$20.00</span>
+                                  </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            
+            <div className="flex-1">
+              <div className="w-full h-11 mb-4 border-b-[2px] uppercase border-opacity-55 border-gray-500">
+                <h1>
+                    Bestsellers
+                </h1>
+              </div>
+            </div>
+          </div> 
+        </section>
+
       </div>
     </main >
   );

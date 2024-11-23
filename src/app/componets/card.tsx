@@ -1,24 +1,8 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from 'next/link';
-import { link } from "fs";
 
 export default function Card() {
-    const [hover, setHover] = useState(false);
-    const [hoverTimeout, setHoverTimeout] = useState<null | NodeJS.Timeout>(null);
-
-    const handleMouseEnter = () => {
-        const timeout = setTimeout(() => setHover(true), 1000); // Adiciona o hover após 1 segundo
-        setHoverTimeout(timeout); // Armazena o timeout
-    };
-
-    const handleMouseLeave = () => {
-        if (hoverTimeout) {
-            clearTimeout(hoverTimeout); // Limpa o timeout se o mouse sair antes de 1 segundo
-        }
-        setHover(false); // Remove o hover
-    };
 
     return (
         <Link href="/produto/game">
