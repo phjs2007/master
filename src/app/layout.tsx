@@ -26,6 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" bg-fundo  ">
+      <header className="fixed top-0 left-0 w-full bg-gray-800 opacity-50 text-white z-10 p-4">
+        <h1 className="text-xl opacity-100 z-20 relative">Meu Cabeçalho Fixo</h1>
+      </header>
         {children}
       </body>
     </html>

@@ -14,14 +14,12 @@ import Carrosel from "./componets/carrosel";
 import Cardslide from "./componets/card-slide";
 import Card from "./componets/card";
 import Link from "next/link";
+import Cardmedio from "./componets/card-medio";
 
 export default function Home() {
 
   return (
     <main className="w-full overflow-x-hidden  h-fit box-border">
-      <header className="fixed top-0 left-0 w-full bg-gray-800 opacity-50 text-white z-10 p-4">
-        <h1 className="text-xl opacity-100 z-20 relative">Meu Cabeçalho Fixo</h1>
-      </header>
       <section  className="w-full">
         <Frost />
       </section>
@@ -308,8 +306,8 @@ export default function Home() {
         </section>
 
         <section className="w-full">
-          <div className="w-full flex gap-8">
-            <div className="flex-1">
+          <div className="w-5/6 flex gap-8 md:flex md:w-full">
+            <div className="flex-1 space-y-4 ">
 
               <div className="w-full h-11 mb-4 border-b-[2px] uppercase border-opacity-55 border-gray-500">
                 <h1>
@@ -317,207 +315,29 @@ export default function Home() {
                 </h1>
               </div>
 
-              <div className="w-full h-36 bg-white flex text-black">
 
-                <div className=" p-1 w-1/3 h-full">
-                  <Image
-                     src="/assets/bg.webp"
-                     alt="Baldur's Gate 3"
-                     width={200}
-                     height={200}
-                     quality={100}
-                     className=" w-full h-full "
-                   />
+
+              {[...Array(10)].map((_, index) => (
+                <div key={index} >
+                    <Cardmedio/>
                 </div>
-
-                <div className="flex-1 flex flex-col p-3">
-                  <div className="flex-1">
-                    <p>
-                      Baldurs gate 3
-                    </p>
-                  </div>
-                  <div className="flex flex-1 justify-between items-end">
-                    <div>
-                    <Heart />
-                    </div>
-                    <div className="flex gap-2">
-                    <div className=" text-center">
-                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
-                                          50%
-                                      </h1>
-                                  </div>
-                      <div className="flex flex-col font-medium justify-end items-end ">
-                         <span className="text-sm line-through w-fit">R$40</span>
-                         <span className="">R$20.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="w-full h-36 bg-white flex text-black">
-
-                <div className=" p-1 w-1/3 h-full">
-                  <Image
-                     src="/assets/bg.webp"
-                     alt="Baldur's Gate 3"
-                     width={200}
-                     height={200}
-                     quality={100}
-                     className=" w-full h-full "
-                   />
-                </div>
-
-                <div className="flex-1 flex flex-col p-3">
-                  <div className="flex-1">
-                    <p>
-                      Baldurs gate 3
-                    </p>
-                  </div>
-                  <div className="flex flex-1 justify-between items-end">
-                    <div>
-                    <Heart />
-                    </div>
-                    <div className="flex gap-2">
-                    <div className=" text-center">
-                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
-                                          50%
-                                      </h1>
-                                  </div>
-                      <div className="flex flex-col font-medium justify-end items-end ">
-                         <span className="text-sm line-through w-fit">R$40</span>
-                         <span className="">R$20.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="w-full h-36 bg-white flex text-black">
-
-                <div className=" p-1 w-1/3 h-full">
-                  <Image
-                     src="/assets/bg.webp"
-                     alt="Baldur's Gate 3"
-                     width={200}
-                     height={200}
-                     quality={100}
-                     className=" w-full h-full "
-                   />
-                </div>
-
-                <div className="flex-1 flex flex-col p-3">
-                  <div className="flex-1">
-                    <p>
-                      Baldurs gate 3
-                    </p>
-                  </div>
-                  <div className="flex flex-1 justify-between items-end">
-                    <div>
-                    <Heart />
-                    </div>
-                    <div className="flex gap-2">
-                    <div className=" text-center">
-                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
-                                          50%
-                                      </h1>
-                                  </div>
-                      <div className="flex flex-col font-medium justify-end items-end ">
-                         <span className="text-sm line-through w-fit">R$40</span>
-                         <span className="">R$20.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="w-full h-36 bg-white flex text-black">
-
-                <div className=" p-1 w-1/3 h-full">
-                  <Image
-                     src="/assets/bg.webp"
-                     alt="Baldur's Gate 3"
-                     width={200}
-                     height={200}
-                     quality={100}
-                     className=" w-full h-full "
-                   />
-                </div>
-
-                <div className="flex-1 flex flex-col p-3">
-                  <div className="flex-1">
-                    <p>
-                      Baldurs gate 3
-                    </p>
-                  </div>
-                  <div className="flex flex-1 justify-between items-end">
-                    <div>
-                    <Heart />
-                    </div>
-                    <div className="flex gap-2">
-                    <div className=" text-center">
-                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
-                                          50%
-                                      </h1>
-                                  </div>
-                      <div className="flex flex-col font-medium justify-end items-end ">
-                         <span className="text-sm line-through w-fit">R$40</span>
-                         <span className="">R$20.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="w-full h-36 bg-white flex text-black">
-
-                <div className=" p-1 w-1/3 h-full">
-                  <Image
-                     src="/assets/bg.webp"
-                     alt="Baldur's Gate 3"
-                     width={200}
-                     height={200}
-                     quality={100}
-                     className=" w-full h-full "
-                   />
-                </div>
-
-                <div className="flex-1 flex flex-col p-3">
-                  <div className="flex-1">
-                    <p>
-                      Baldurs gate 3
-                    </p>
-                  </div>
-                  <div className="flex flex-1 justify-between items-end">
-                    <div>
-                    <Heart />
-                    </div>
-                    <div className="flex gap-2">
-                    <div className=" text-center">
-                                      <h1 className="bg-violet-600 rounded-lg font-bold text-white p-2">
-                                          50%
-                                      </h1>
-                                  </div>
-                      <div className="flex flex-col font-medium justify-end items-end ">
-                         <span className="text-sm line-through w-fit">R$40</span>
-                         <span className="">R$20.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            ))}
 
             </div>
 
             
-            <div className="flex-1">
+            <div className="flex-1 space-y-4">
               <div className="w-full h-11 mb-4 border-b-[2px] uppercase border-opacity-55 border-gray-500">
                 <h1>
                     Bestsellers
                 </h1>
+              </div>
+              <div className="space-y-4">
+              {[...Array(10)].map((_, index) => (
+                <div key={index} >
+                    <Cardmedio/>
+                </div>
+            ))}
               </div>
             </div>
           </div> 
