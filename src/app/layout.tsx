@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Image from "next/image";
+import Link from 'next/link';
+import { Search, ShoppingCart, User } from "lucide-react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,11 +27,62 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className=" bg-fundo  ">
-      <header className="fixed top-0 left-0 w-full bg-gray-800 opacity-50 text-white z-10 p-4">
-        <h1 className="text-xl opacity-100 z-20 relative">Meu Cabeçalho Fixo</h1>
-      </header>
+        <header className="fixed top-0 left-0 w-full bg-[#1A1A1A] bg-opacity-90 text-white z-50 ">
+          <div className="flex w-full h-[52px]: p-2 items-center gap-3">
+            <div className="w-4/12 flex items-center  justify-between ml-5">
+              <Image
+                src="/assets/icon 1.png"
+                alt="Baldur's Gate 3"
+                width={50}
+                height={50}
+                quality={100}
+              />
+              <div>
+                <Link href="/">
+                  <h1>
+                    Descobrir
+                  </h1>
+                </Link>
+              </div>
+              <div>
+                <Link href="/">
+                  <h1>
+                    Navegar
+                  </h1>
+                </Link>
+              </div>
+              <div>
+                <Link href="/">
+                  <h1>
+                    Suporte
+                  </h1>
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-5/12 relative text-white ml-6">
+              <span className="absolute z-20 left-2 top-1/2 transform -translate-y-1/2">
+                <Search />
+              </span>
+              <input
+                type="text"
+                className="w-full text-left z-10 relative pl-10 bg-[#3E3E3E] text-white"
+              />
+            </div>
+
+            <div className="flex w-2/12 justify-end gap-24 items-center">
+              <span>
+                <ShoppingCart />
+              </span>
+              <span className="bg-white rounded-full p-2">
+                <User color="black" />
+              </span>
+            </div>
+          </div>
+
+        </header>
         {children}
       </body>
     </html>

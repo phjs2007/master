@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "fundo": "#0D1B2A",
+        "fundo": "#04052e",
         "button": "#a0d62e",
       },
       padding: {
@@ -21,7 +21,8 @@ const config: Config = {
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(0deg, rgba(94,145,15,1) 0%, rgba(161,193,64,1) 100%)',
-        'bg-custom': "url('https://images.gog.com/1bbef106456ae10b4bac6f3700e9a1b537fd58016734fb55af8506236d890c9a_big_spot_background_943x396_2x.webp')", // Corrigido aqui
+        'bg-custom': "url('https://images.gog.com/1bbef106456ae10b4bac6f3700e9a1b537fd58016734fb55af8506236d890c9a_big_spot_background_943x396_2x.webp')",
+
       },
     },
   },

@@ -7,7 +7,7 @@ export default function Frost() {
             <Image
                 src="/assets/2.jpg"
                 alt="Descrição da imagem"
-                priority = {true}
+                priority={true}
                 width={1000} // largura em pixels
                 height={1000} // altura em pixels
                 className="w-[100vw] sm:w-[100vw] md:w-[100vw] lg:w-[100vw]  rounded-lg z-0 absolute  h-full object-cover "
@@ -31,7 +31,6 @@ export default function Frost() {
                     </div>
                     <div className=" mr-[2px] sm:mr-3 row-start-2 flex space-x-4 sm:space-x-2 lg:space-x-4 justify-center items-center ">
                         <p className="font-semibold text-sm sm:text-2xl ">R$119.99</p>
-                        <button className="border p-1 sm:p-2 "><Heart size={25} /></button>
                         <button className=" sm-p-1  flex p-1 sm:p-2  bg-custom-gradient font-semibold ">
                             <ShoppingCart size={30} />
                             <span className="hidden sm:hidden md:block md:text-lg  ">Add to cart</span> </button>
