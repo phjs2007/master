@@ -23,7 +23,7 @@ export default function Card({ id, name, imageUrl, price, discount, finalPrice }
                         width={300}
                         height={100}
                         quality={100}
-                        className="w-full h-1/2"
+                        className="w-full h-1/2 overflow-y-hidden"
                     />
                 </div>
                 <div className="grid grid-rows-2 p-1 sm:p-2">

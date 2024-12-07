@@ -54,7 +54,7 @@ export default function RootLayout({
                 </Link>
               </div>
               <div>
-                <Link href="/">
+                <Link href="/produto/suporte">
                   <h1>
                     Suporte
                   </h1>

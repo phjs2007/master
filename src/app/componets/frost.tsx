@@ -7,7 +7,6 @@ export default function Frost() {
             <Image
                 src="/assets/2.jpg"
                 alt="Descrição da imagem"
-                priority={true}
                 width={1000} // largura em pixels
                 height={1000} // altura em pixels
                 className="w-[100vw] sm:w-[100vw] md:w-[100vw] lg:w-[100vw]  rounded-lg z-0 absolute  h-full object-cover "

@@ -79,13 +79,13 @@ const GameDetails = ({ params }: { params: { id: string } }) => {
             </div>
 
             <section className="w-full bg-slate-200 bg-opacity-95 z-40 p-main sm:p-sm_main relative">
-                <h1>
-                    {gameDetails.title || 'Título do jogo não disponível'}
+                <h1 className="text-black font-semibold text-3xl">
+                    {gameDetails.name || 'Título do jogo não disponível'}
                 </h1>
                 <div className="w-4/12 bg-slate-100 h-64 absolute right-4 -top-36 shadow-md">
                     <div className="w-full h-1/3 flex items-center py-3 gap-20">
                         <div className="w-4/12 h-3/4 flex justify-center items-center bg-violet-600 rounded-r-xl">
-                            <h1 className="text-slate-950 md:font-semibold text-3xl">{gameDetails.title || 'Título do jogo não disponível'}</h1>
+                            <h1 className="text-slate-950 md:font-semibold text-3xl">{gameDetails.desconto || 'Título do jogo não disponível'} %</h1>
                         </div>
                         <div className="flex flex-col justify-end items-end">
                             <span className="text-lg line-through w-fit text-black font-extralight opacity-60">
@@ -98,6 +98,11 @@ const GameDetails = ({ params }: { params: { id: string } }) => {
                         <button className="flex p-1 bg-custom-gradient font-semibold w-full h-full justify-center items-center gap-3 rounded-xl">
                             <ShoppingCart size={25} />
                             <span className="hidden sm:hidden md:block md:text-lg">Add to cart</span>
+                        </button>
+                    </div>
+                    <div className="h-1/3 p-3">
+                    <button className="flex p-1 bg-violet-950 font-semibold w-full h-full justify-center items-center gap-3 rounded-xl">
+                            <span className="hidden sm:hidden md:block md:text-lg">Comprar agora</span>
                         </button>
                     </div>
                 </div>
