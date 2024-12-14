@@ -23,14 +23,14 @@ export default function CardMedio({
       <div className="w-full sm:h-36 bg-white flex text-black h-24">
         {/* Imagem do Produto */}
         <div className="p-1 w-2/5 h-full">
-          <Image
-            src={imageUrl}
-            alt={title}
-            width={207}
-            height={200}
-            quality={100}
-            className="w-full h-full"
-          />
+        <Image
+  src={imageUrl || '/default-image.png'} // Use uma imagem padrão se imageUrl for inválido
+  alt={title}
+  width={207}
+  height={200}
+  quality={100}
+  className="w-full h-full"
+/>
         </div>
 
         {/* Detalhes do Produto */}
