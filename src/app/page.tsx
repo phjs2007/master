@@ -1,6 +1,5 @@
 "use client";
 import Frost from "./componets/frost";
-import Image from "next/image";
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
@@ -8,7 +7,6 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import Card from "./componets/card";
-import Link from "next/link";
 import CardMedio from "./componets/card-medio";
 import SlideCenter from "./componets/slide-centro";
 
