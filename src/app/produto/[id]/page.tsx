@@ -41,7 +41,7 @@ const GameDetails = ({ params }: { params: { id: string } }) => {
     useEffect(() => {
         const fetchGameDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:3001/games/${gameId}`);
+                const response = await fetch(`https://keygames.onrender.com/games/${gameId}`);
                 const data = await response.json();
                 if (response.ok) {
                     setGameDetails(data);

@@ -53,7 +53,6 @@ export default function SlideCenter() {
                 ))}
             </Swiper>
 
-            {/* Segundo Swiper - Mostrando os jogos restantes (após o 10º) */}
             <div>
                 <Swiper
                     spaceBetween={10}
