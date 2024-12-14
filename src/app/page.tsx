@@ -5,14 +5,12 @@ import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
-import { ChevronRight, Heart, ShoppingCart } from "lucide-react";
-import Cardslide from "./componets/card-slide";
 import Card from "./componets/card";
 import Link from "next/link";
-import Cardmedio from "./componets/card-medio";
 import CardMedio from "./componets/card-medio";
+import SlideCenter from "./componets/slide-centro";
 
 interface Game {
   id: number;
@@ -28,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchGames = async () => {
-      const response = await fetch('http://localhost:3001/games');
+      const response = await fetch('https://keygames.onrender.com/games/destaques');
       const data = await response.json();
       setGames(data);
     };
@@ -46,73 +44,7 @@ export default function Home() {
       <div className="overflow-x-hidden p-main sm:p-sm_main box-border lg:m-sm_main flex flex-col space-y-20">
 
         <section className="w-full overflow-hidden gap-5 flex flex-col">
-          <div className="w-full h-11 mb-4 border-b-[1px] uppercase border-opacity-25 border-gray-500">
-            <h1 className="font-medium text-lg">destaques</h1>
-          </div>
-          <Swiper slidesPerView={1} style={{ width: "100%" }} navigation={true} loop={true} modules={[Navigation]}>
-            {[...Array(10)].map((_, index) => (
-              <SwiperSlide key={index} >
-                <Cardslide />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          <div>
-            <Swiper
-              spaceBetween={10}
-              slidesPerView={3}
-              navigation={true}
-              slidesPerGroup={4}
-              speed={1000}
-              loop={true}
-              pagination={{
-                el: ".custom-pagination",
-                clickable: true,
-                renderBullet: (index, className) => {
-                  return `<span class="${className} swiper-pagination-line w-6 h-2 bg-gray-300 rounded"></span>`;
-                },
-              }}
-              breakpoints={{
-                300: {
-                  slidesPerView: 1,
-                  slidesPerGroup: 1,
-                  spaceBetween: 20,
-                },
-                480: {
-                  slidesPerView: 2,
-                  slidesPerGroup: 2,
-                  spaceBetween: 30,
-                },
-                640: {
-                  slidesPerView: 3,
-                  slidesPerGroup: 3,
-                  spaceBetween: 32,
-                },
-                940: {
-                  slidesPerView: 4,
-                  spaceBetween: 32,
-                },
-              }}
-              modules={[Pagination, Navigation]}
-            >
-
-              {games.map((game) => (
-                <SwiperSlide className="">
-                  <Card
-                    id={game.id}
-                    key={game.id}
-                    name={game.name}
-                    imageUrl={game.rawgImageUrl}
-                    price={game.price}
-                    discount={game.desconto}
-                    finalPrice={Number((game.price - (game.price * (game.desconto / 100))).toFixed(2))}
-                  />
-                </SwiperSlide>
-
-              ))}
-
-            </Swiper>
-          </div>
+          <SlideCenter />
         </section>
 
         <section className="space-y-10">
@@ -240,7 +172,7 @@ export default function Home() {
                         imageUrl={game.rawgImageUrl}
                         price={game.price}
                         discount={game.desconto}
-                        finalPrice={game.price - (game.price * (game.desconto / 100))}
+                        finalPrice={Number((game.price - (game.price * (game.desconto / 100))).toFixed(2))}
                       />
                     ))}
                   </div>
@@ -264,10 +196,9 @@ export default function Home() {
 
 
               {games.map(game => (
-                <div className="my-2">
+                <div className="my-2" key={game.id}> {/* Corrigido: key foi movido para o elemento div */}
                   <CardMedio
                     id={game.id}
-                    key={game.id}
                     title={game.name} // Alterado de name para title
                     imageUrl={game.rawgImageUrl}
                     price={game.price || 0} // Valor padrão caso seja undefined
@@ -292,10 +223,9 @@ export default function Home() {
               </div>
               <div className="space-y-4 ">
                 {games.map(game => (
-                  <div className="my-2">
+                  <div className="my-2" key={game.id}> {/* Corrigido: key foi movido para o elemento div */}
                     <CardMedio
                       id={game.id}
-                      key={game.id}
                       title={game.name} // Alterado de name para title
                       imageUrl={game.rawgImageUrl}
                       price={game.price || 0} // Valor padrão caso seja undefined
